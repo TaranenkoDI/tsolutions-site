@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T Solutions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    header {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    p {
+      max-width: 500px;
+      margin: 1rem auto;
+    }
+    .lang-switcher {
+      margin-top: 1rem;
+    }
+    button {
+      margin: 0 0.25rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .whatsapp {
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+    .whatsapp a {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: #25D366;
+      font-weight: bold;
+    }
+    .whatsapp svg {
+      margin-right: 0.5rem;
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <header id="title">T Solutions</header>
+  <p id="description">We help companies navigate through crisis situations, stabilize operations, and return to growth. Our expert team offers custom strategies and hands-on support.</p>
+
+  <div class="lang-switcher">
+    <button onclick="switchLanguage('en')">English</button>
+    <button onclick="switchLanguage('fr')">Français</button>
+  </div>
+
+  <div class="whatsapp">
+    <a href="https://wa.me/12049528365" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M20.52 3.48A11.92 11.92 0 0 0 12 0C5.37 0 .07 6.29 0 13.93a12.06 12.06 0 0 0 1.63 6.05L0 24l4.19-1.38a11.9 11.9 0 0 0 5.6 1.41h.01c6.62 0 12-5.37 12-12 0-3.19-1.25-6.2-3.48-8.52zM12 22c-1.7 0-3.37-.44-4.83-1.27l-.35-.2-2.49.82.83-2.42-.22-.36A9.93 9.93 0 0 1 2 13.93C2.07 7.58 6.91 2.03 12 2a10 10 0 0 1 0 20zm5.44-7.62c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.19.3-.76.97-.93 1.17-.17.2-.35.22-.65.07a8.31 8.31 0 0 1-2.43-1.5 9.2 9.2 0 0 1-1.7-2.11c-.18-.3-.02-.47.13-.62.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.37 0-.52-.07-.15-.66-1.57-.9-2.15-.24-.58-.48-.5-.66-.51h-.56c-.18 0-.47.07-.7.35-.24.27-.92.9-.92 2.2s.94 2.55 1.08 2.73c.13.18 1.85 2.84 4.5 3.98.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.54-.63 1.76-1.23.22-.6.22-1.1.15-1.23-.08-.13-.27-.2-.57-.35z"/>
+      </svg>
+      Contact via WhatsApp
+    </a>
+  </div>
+
+  <script>
+    const texts = {
+      en: {
+        title: "T Solutions",
+        description: "We help companies navigate through crisis situations, stabilize operations, and return to growth. Our expert team offers custom strategies and hands-on support."
+      },
+      fr: {
+        title: "T Solutions",
+        description: "Nous aidons les entreprises à surmonter les situations de crise, à stabiliser leurs opérations et à retrouver la croissance. Notre équipe propose des stratégies sur mesure et un accompagnement pratique."
+      }
+    };
+
+    function switchLanguage(lang) {
+      document.getElementById('title').innerText = texts[lang].title;
+      document.getElementById('description').innerText = texts[lang].description;
+    }
+  </script>
+</body>
+</html>
