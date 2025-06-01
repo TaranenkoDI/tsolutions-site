@@ -3,216 +3,209 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>T Solutions – Crisis Management Experts</title>
+  <meta name="description" content="T Solutions - expert crisis management and business continuity services." />
+  <meta name="keywords" content="crisis management, business continuity, risk management, emergency response, T Solutions" />
+  <meta name="author" content="T Solutions" />
+  <title>T Solutions</title>
   <style>
-    /* Сброс стилей */
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+    /* Общий стиль */
     body {
-      background: #0b2144;
-      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
       line-height: 1.6;
     }
-    a {
-      color: #0af;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Контейнер */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Hero */
     header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      background: #0d47a1;
+      color: white;
       text-align: center;
-      background: linear-gradient(135deg, #0b2144 0%, #031426 100%);
-      padding: 0 20px;
+      padding: 60px 20px 40px;
+    }
+    header img {
+      margin-bottom: 20px;
+      max-width: 150px;
     }
     header h1 {
       font-size: 3rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: 2px;
+      margin: 0 0 10px;
     }
     header p {
-      font-size: 1.25rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      margin: 0 0 20px;
       max-width: 600px;
-      color: #a0bfff;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .btn-primary {
-      background: #0af;
-      color: #fff;
-      padding: 0.75rem 2rem;
-      font-size: 1.1rem;
+    header button {
+      background-color: #ffc107;
       border: none;
-      border-radius: 4px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
       cursor: pointer;
-      transition: background 0.3s ease;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
     }
-    .btn-primary:hover {
-      background: #08c;
+    header button:hover {
+      background-color: #ffb300;
     }
 
-    /* Sections */
     section {
       padding: 60px 20px;
-      background: #031426;
-    }
-    section:nth-of-type(even) {
-      background: #0b2144;
+      max-width: 900px;
+      margin: 0 auto;
     }
     h2 {
       text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2rem;
-      letter-spacing: 1.5px;
-      color: #77aaff;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #0d47a1;
     }
-    p.section-text {
-      max-width: 800px;
-      margin: 0 auto 2rem auto;
+    .section-text {
+      max-width: 700px;
+      margin: 0 auto 40px;
       font-size: 1.1rem;
-      color: #cbd6f5;
-      line-height: 1.5;
       text-align: center;
     }
 
-    /* Services grid */
-    .services {
+    /* Услуги */
+    #services {
+      background-color: #e8f0fe;
+    }
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      max-width: 1000px;
-      margin: 0 auto;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
     .service-card {
-      background: #142b5a;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #0008;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
     .service-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 8px 20px #0a3ef5cc;
     }
     .service-card h3 {
-      margin-bottom: 10px;
-      color: #a3c7ff;
+      margin-top: 0;
+      color: #0d47a1;
     }
     .service-card p {
-      font-size: 0.95rem;
-      color: #c5d3f8;
+      color: #555;
     }
 
-    /* Advantages */
-    .advantages-list {
-      max-width: 700px;
+    /* Преимущества */
+    #advantages ul {
+      max-width: 600px;
       margin: 0 auto;
-      list-style: none;
-      padding-left: 0;
-    }
-    .advantages-list li {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
       padding-left: 20px;
-      position: relative;
-      color: #a9bfff;
+      list-style-type: disc;
+      color: #444;
+      font-size: 1.1rem;
     }
-    .advantages-list li::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      color: #0af;
-      font-weight: bold;
+    #advantages ul li {
+      margin-bottom: 10px;
     }
 
-    /* Contact */
-    .contact-center {
+    /* Контакты */
+    #contact {
+      background-color: #e0e7ff;
       text-align: center;
+    }
+    #contact .contact-center {
       max-width: 500px;
       margin: 0 auto;
     }
-    .contact-center a.btn-primary {
-      display: inline-block;
-      margin-top: 1rem;
-      font-weight: 600;
+    form input, form textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      box-sizing: border-box;
+      resize: vertical;
+      font-family: inherit;
     }
-    .contact-info {
-      margin-top: 1rem;
+    form button {
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      padding: 15px;
       font-size: 1.1rem;
-      color: #a0bfff;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #094a8f;
+    }
+    #contact .contact-info {
+      margin-top: 15px;
+      font-size: 1rem;
+      color: #0d47a1;
     }
 
-    /* Footer */
     footer {
+      background-color: #0d47a1;
+      color: white;
       text-align: center;
-      padding: 20px;
+      padding: 20px 10px;
       font-size: 0.9rem;
-      color: #34588b;
-      background: #031426;
-      border-top: 1px solid #0a2a5f;
-      margin-top: 40px;
     }
     footer a {
-      color: #77aaff;
-      margin: 0 5px;
+      color: #ffc107;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
     }
-
-    /* Language switch */
-    .lang-switch {
-      margin-top: 10px;
-      font-size: 0.9rem;
-      color: #77aaff;
-      cursor: pointer;
-      user-select: none;
+    footer a:hover {
       text-decoration: underline;
     }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
+    /* Переключатель языка */
+    .lang-switch {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background-color: #ffc107;
+      color: #0d47a1;
+      padding: 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      user-select: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+    .lang-switch:hover {
+      background-color: #ffb300;
     }
   </style>
 </head>
 <body>
 
+  <div class="lang-switch">Français</div>
+
   <header>
+    <img src="https://via.placeholder.com/150x50?text=T+Solutions" alt="T Solutions Logo" />
     <h1>T Solutions</h1>
     <p>Your trusted partner in crisis management and business continuity.</p>
-    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-      Contact Us
-    </button>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contact Us</button>
   </header>
 
   <section id="about">
     <h2>About Us</h2>
-    <p class="section-text">
-      At T Solutions, we specialize in guiding companies through challenging times with expert crisis management strategies. Our mission is to protect your business reputation, minimize risks, and ensure continuity.
-    </p>
+    <p class="section-text">At T Solutions, we specialize in guiding companies through challenging times with expert crisis management strategies. Our mission is to protect your business reputation, minimize risks, and ensure continuity.</p>
   </section>
 
   <section id="services">
     <h2>Our Services</h2>
-    <div class="services">
+    <div class="services-grid">
       <div class="service-card">
         <h3>Crisis Planning & Assessment</h3>
         <p>Developing tailored crisis management plans to prepare your company for any eventuality.</p>
@@ -246,17 +239,158 @@
     <h2>Contact Us</h2>
     <div class="contact-center">
       <p>Ready to safeguard your business? Reach out to us today.</p>
-      <a href="mailto:contact@tsolutions.com" class="btn-primary">Email Us</a>
-      <p class="contact-info">Or call us at: +1 (555) 123-4567</p>
-      <p class="lang-switch" onclick="alert('Language switch coming soon!')">Switch to Français</p>
+      <form id="contact-form" onsubmit="return sendEmail()">
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <input type="email" id="email" name="email" placeholder="Your Email" required />
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-info">Or call us at: +1 (555) 123-4567</div>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 T Solutions. All rights reserved.  
+    © 2025 T Solutions. All rights reserved.
     <br />
     <a href="#about">About</a> | <a href="#services">Services</a> | <a href="#contact">Contact</a>
   </footer>
 
+  <script>
+    function sendEmail() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please fill all fields.');
+        return false;
+      }
+
+      const mailtoLink = `mailto:contact@tsolutions.com?subject=Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(message + '\\n\\nFrom: ' + name + ' (' + email + ')')}`;
+      window.location.href = mailtoLink;
+
+      return false; // Prevent form submission
+    }
+
+    const translations = {
+      en: {
+        headerTitle: "T Solutions",
+        headerDesc: "Your trusted partner in crisis management and business continuity.",
+        btnContact: "Contact Us",
+        aboutTitle: "About Us",
+        aboutText: "At T Solutions, we specialize in guiding companies through challenging times with expert crisis management strategies. Our mission is to protect your business reputation, minimize risks, and ensure continuity.",
+        servicesTitle: "Our Services",
+        services: [
+          {title: "Crisis Planning & Assessment", text: "Developing tailored crisis management plans to prepare your company for any eventuality."},
+          {title: "Risk Management", text: "Identifying, analyzing, and mitigating risks to safeguard your assets and operations."},
+          {title: "Business Continuity", text: "Ensuring your business can operate smoothly during disruptions with minimal downtime."},
+          {title: "Emergency Response", text: "Coordinating rapid response efforts to manage and contain crises effectively."}
+        ],
+        advantagesTitle: "Why Choose Us",
+        advantagesList: [
+          "Experienced crisis management professionals",
+          "Customized solutions for each client",
+          "24/7 support and rapid response",
+          "Proven track record with diverse industries"
+        ],
+        contactTitle: "Contact Us",
+        contactText: "Ready to safeguard your business? Reach out to us today.",
+        contactEmailBtn: "Send Message",
+        contactPhone: "Or call us at: +1 (555) 123-4567",
+        footerText: "© 2025 T Solutions. All rights reserved.",
+        navAbout: "About",
+        navServices: "Services",
+        navContact: "Contact",
+        langSwitch: "Français"
+      },
+      fr: {
+        headerTitle: "T Solutions",
+        headerDesc: "Votre partenaire de confiance en gestion de crise et continuité des affaires.",
+        btnContact: "Contactez-nous",
+        aboutTitle: "À propos de nous",
+        aboutText: "Chez T Solutions, nous aidons les entreprises à traverser les périodes difficiles grâce à des stratégies expertes de gestion de crise. Notre mission est de protéger votre réputation, minimiser les risques et assurer la continuité.",
+        servicesTitle: "Nos services",
+        services: [
+          {title: "Planification et évaluation de crise", text: "Développement de plans de gestion de crise adaptés pour préparer votre entreprise à toute éventualité."},
+          {title: "Gestion des risques", text: "Identification, analyse et atténuation des risques pour protéger vos actifs et opérations."},
+          {title: "Continuité des affaires", text: "Assurer le bon fonctionnement de votre entreprise pendant les perturbations avec un minimum de temps d'arrêt."},
+          {title: "Réponse d'urgence", text: "Coordonner des efforts de réponse rapide pour gérer et contenir efficacement les crises."}
+        ],
+        advantagesTitle: "Pourquoi nous choisir",
+        advantagesList: [
+          "Professionnels expérimentés en gestion de crise",
+          "Solutions personnalisées pour chaque client",
+          "Support 24/7 et réponse rapide",
+          "Historique de succès avec diverses industries"
+        ],
+        contactTitle: "Contactez-nous",
+        contactText: "Prêt à protéger votre entreprise? Contactez-nous dès aujourd'hui.",
+        contactEmailBtn: "Envoyer le message",
+        contactPhone: "Ou appelez-nous au : +1 (555) 123-4567",
+        footerText: "© 2025 T Solutions. Tous droits réservés.",
+        navAbout: "À propos",
+        navServices: "Services",
+        navContact: "Contact",
+        langSwitch: "English"
+      }
+    };
+
+    let currentLang = 'en';
+
+    function translatePage(lang) {
+      currentLang = lang;
+      const t = translations[lang];
+
+      document.querySelector('header h1').textContent = t.headerTitle;
+      document.querySelector('header p').textContent = t.headerDesc;
+      document.querySelector('header button').textContent = t.btnContact;
+
+      document.querySelector('#about h2').textContent = t.aboutTitle;
+      document.querySelector('#about .section-text').textContent = t.aboutText;
+
+      document.querySelector('#services h2').textContent = t.servicesTitle;
+
+      const servicesGrid = document.querySelector('.services-grid');
+      servicesGrid.innerHTML = '';
+      t.services.forEach(s => {
+        const card = document.createElement('div');
+        card.classList.add('service-card');
+        card.innerHTML = `<h3>${s.title}</h3><p>${s.text}</p>`;
+        servicesGrid.appendChild(card);
+      });
+
+      document.querySelector('#advantages h2').textContent = t.advantagesTitle;
+      const advantagesList = document.querySelector('#advantages ul');
+      advantagesList.innerHTML = '';
+      t.advantagesList.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        advantagesList.appendChild(li);
+      });
+
+      document.querySelector('#contact h2').textContent = t.contactTitle;
+      document.querySelector('#contact .contact-center p').textContent = t.contactText;
+      document.querySelector('#contact form button').textContent = t.contactEmailBtn;
+      document.querySelector('#contact .contact-info').textContent = t.contactPhone;
+
+      document.querySelector('footer').innerHTML = `
+        ${t.footerText}<br/>
+        <a href="#about">${t.navAbout}</a> | <a href="#services">${t.navServices}</a> | <a href="#contact">${t.navContact}</a>
+      `;
+
+      document.querySelector('.lang-switch').textContent = t.langSwitch;
+    }
+
+    document.querySelector('.lang-switch').addEventListener('click', () => {
+      if (currentLang === 'en') {
+        translatePage('fr');
+      } else {
+        translatePage('en');
+      }
+    });
+
+    // Инициализация
+    translatePage(currentLang);
+  </script>
 </body>
 </html>
