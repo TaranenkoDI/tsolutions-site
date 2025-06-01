@@ -1,99 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>T Solutions</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>T Solutions – Crisis Management Experts</title>
   <style>
+    /* Сброс стилей */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f9fc;
-      color: #333;
+      background: #0b2144;
+      color: #fff;
+      line-height: 1.6;
+    }
+    a {
+      color: #0af;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Контейнер */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Hero */
+    header {
+      height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #0b2144 0%, #031426 100%);
+      padding: 0 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+      color: #a0bfff;
+    }
+    .btn-primary {
+      background: #0af;
+      color: #fff;
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: #08c;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 20px;
+      background: #031426;
+    }
+    section:nth-of-type(even) {
+      background: #0b2144;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+      color: #77aaff;
+    }
+    p.section-text {
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+      font-size: 1.1rem;
+      color: #cbd6f5;
+      line-height: 1.5;
       text-align: center;
     }
-    header {
-      font-size: 2rem;
-      font-weight: bold;
+
+    /* Services grid */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .service-card {
+      background: #142b5a;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #0008;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px #0a3ef5cc;
+    }
+    .service-card h3 {
+      margin-bottom: 10px;
+      color: #a3c7ff;
+    }
+    .service-card p {
+      font-size: 0.95rem;
+      color: #c5d3f8;
+    }
+
+    /* Advantages */
+    .advantages-list {
+      max-width: 700px;
+      margin: 0 auto;
+      list-style: none;
+      padding-left: 0;
+    }
+    .advantages-list li {
       margin-bottom: 1rem;
+      font-size: 1.1rem;
+      padding-left: 20px;
+      position: relative;
+      color: #a9bfff;
     }
-    p {
-      max-width: 500px;
-      margin: 1rem auto;
-    }
-    .lang-switcher {
-      margin-top: 1rem;
-    }
-    button {
-      margin: 0 0.25rem;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      cursor: pointer;
-      border: none;
-      background: #007bff;
-      color: white;
-      border-radius: 5px;
-    }
-    button:hover {
-      background: #0056b3;
-    }
-    .whatsapp {
-      margin-top: 2rem;
-      font-size: 1rem;
-    }
-    .whatsapp a {
-      display: inline-flex;
-      align-items: center;
-      text-decoration: none;
-      color: #25D366;
+    .advantages-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #0af;
       font-weight: bold;
     }
-    .whatsapp svg {
-      margin-right: 0.5rem;
-      width: 24px;
-      height: 24px;
+
+    /* Contact */
+    .contact-center {
+      text-align: center;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .contact-center a.btn-primary {
+      display: inline-block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    .contact-info {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #a0bfff;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #34588b;
+      background: #031426;
+      border-top: 1px solid #0a2a5f;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #77aaff;
+      margin: 0 5px;
+    }
+
+    /* Language switch */
+    .lang-switch {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #77aaff;
+      cursor: pointer;
+      user-select: none;
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header id="title">T Solutions</header>
-  <p id="description">We help companies navigate through crisis situations, stabilize operations, and return to growth. Our expert team offers custom strategies and hands-on support.</p>
 
-  <div class="lang-switcher">
-    <button onclick="switchLanguage('en')">English</button>
-    <button onclick="switchLanguage('fr')">Français</button>
-  </div>
+  <header>
+    <h1>T Solutions</h1>
+    <p>Your trusted partner in crisis management and business continuity.</p>
+    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Contact Us
+    </button>
+  </header>
 
-  <div class="whatsapp">
-    <a href="https://wa.me/12049528365" target="_blank">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M20.52 3.48A11.92 11.92 0 0 0 12 0C5.37 0 .07 6.29 0 13.93a12.06 12.06 0 0 0 1.63 6.05L0 24l4.19-1.38a11.9 11.9 0 0 0 5.6 1.41h.01c6.62 0 12-5.37 12-12 0-3.19-1.25-6.2-3.48-8.52zM12 22c-1.7 0-3.37-.44-4.83-1.27l-.35-.2-2.49.82.83-2.42-.22-.36A9.93 9.93 0 0 1 2 13.93C2.07 7.58 6.91 2.03 12 2a10 10 0 0 1 0 20zm5.44-7.62c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.19.3-.76.97-.93 1.17-.17.2-.35.22-.65.07a8.31 8.31 0 0 1-2.43-1.5 9.2 9.2 0 0 1-1.7-2.11c-.18-.3-.02-.47.13-.62.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.37 0-.52-.07-.15-.66-1.57-.9-2.15-.24-.58-.48-.5-.66-.51h-.56c-.18 0-.47.07-.7.35-.24.27-.92.9-.92 2.2s.94 2.55 1.08 2.73c.13.18 1.85 2.84 4.5 3.98.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.54-.63 1.76-1.23.22-.6.22-1.1.15-1.23-.08-.13-.27-.2-.57-.35z"/>
-      </svg>
-      Contact via WhatsApp
-    </a>
-  </div>
+  <section id="about">
+    <h2>About Us</h2>
+    <p class="section-text">
+      At T Solutions, we specialize in guiding companies through challenging times with expert crisis management strategies. Our mission is to protect your business reputation, minimize risks, and ensure continuity.
+    </p>
+  </section>
 
-  <script>
-    const texts = {
-      en: {
-        title: "T Solutions",
-        description: "We help companies navigate through crisis situations, stabilize operations, and return to growth. Our expert team offers custom strategies and hands-on support."
-      },
-      fr: {
-        title: "T Solutions",
-        description: "Nous aidons les entreprises à surmonter les situations de crise, à stabiliser leurs opérations et à retrouver la croissance. Notre équipe propose des stratégies sur mesure et un accompagnement pratique."
-      }
-    };
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Crisis Planning & Assessment</h3>
+        <p>Developing tailored crisis management plans to prepare your company for any eventuality.</p>
+      </div>
+      <div class="service-card">
+        <h3>Risk Management</h3>
+        <p>Identifying, analyzing, and mitigating risks to safeguard your assets and operations.</p>
+      </div>
+      <div class="service-card">
+        <h3>Business Continuity</h3>
+        <p>Ensuring your business can operate smoothly during disruptions with minimal downtime.</p>
+      </div>
+      <div class="service-card">
+        <h3>Emergency Response</h3>
+        <p>Coordinating rapid response efforts to manage and contain crises effectively.</p>
+      </div>
+    </div>
+  </section>
 
-    function switchLanguage(lang) {
-      document.getElementById('title').innerText = texts[lang].title;
-      document.getElementById('description').innerText = texts[lang].description;
-    }
-  </script>
+  <section id="advantages">
+    <h2>Why Choose Us</h2>
+    <ul class="advantages-list">
+      <li>Experienced crisis management professionals</li>
+      <li>Customized solutions for each client</li>
+      <li>24/7 support and rapid response</li>
+      <li>Proven track record with diverse industries</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-center">
+      <p>Ready to safeguard your business? Reach out to us today.</p>
+      <a href="mailto:contact@tsolutions.com" class="btn-primary">Email Us</a>
+      <p class="contact-info">Or call us at: +1 (555) 123-4567</p>
+      <p class="lang-switch" onclick="alert('Language switch coming soon!')">Switch to Français</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 T Solutions. All rights reserved.  
+    <br />
+    <a href="#about">About</a> | <a href="#services">Services</a> | <a href="#contact">Contact</a>
+  </footer>
+
 </body>
 </html>
