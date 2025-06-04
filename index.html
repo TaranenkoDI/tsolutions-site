@@ -3,106 +3,172 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="T Solutions - Crisis Management for Businesses" />
-  <meta name="keywords" content="Crisis Management, Business Solutions, T Solutions, Operational Clarity" />
-  <meta name="author" content="T Solutions" />
-  <title>T Solutions - Crisis Management</title>
-  <link rel="icon" href="/logo.png" type="image/png">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <title>T Solutions – Business Crisis Management</title>
+  <meta name="description" content="T Solutions helps businesses overcome operational challenges and enhance communication and efficiency.">
+  <meta name="keywords" content="crisis management, communication optimization, business consulting, efficiency">
+  <meta name="author" content="TaranenkoDI">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    .lang-fr { display: none; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1564866657312-7a7c9aee1f94?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+    .cta-button {
+      background: #0066ff;
+      color: white;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    section ul {
+      list-style: none;
+      padding: 0;
+    }
+    section ul li {
+      padding: 10px 0;
+      font-size: 1.1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    form input, form textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #0066ff;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1rem; }
+    }
+    .lang-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <!-- Language Toggle -->
-  <div class="flex justify-end p-4">
-    <select id="langSwitcher" class="border rounded px-2 py-1">
-      <option value="en">English</option>
-      <option value="fr">Français</option>
-    </select>
+<body>
+  <div class="lang-switch">
+    <a href="#" onclick="switchLang('en')">EN</a> |
+    <a href="#" onclick="switchLang('fr')">FR</a>
   </div>
 
-  <!-- Hero Section -->
-  <section class="text-center py-20 bg-white shadow-md">
-    <img src="/logo.png" alt="T Solutions Logo" class="mx-auto w-24 h-24 mb-4">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4 lang-en">Tired of chaos and routine?</h1>
-    <h1 class="text-4xl md:text-5xl font-bold mb-4 lang-fr">Fatigué du chaos et de la routine ?</h1>
-    <p class="text-lg md:text-xl lang-en">Let us bring clarity to your operations.</p>
-    <p class="text-lg md:text-xl lang-fr">Laissez-nous apporter de la clarté à vos opérations.</p>
-    <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_jcikwtux.json" background="transparent" speed="1" style="width: 300px; height: 300px; margin: auto;" loop autoplay></lottie-player>
-  </section>
+  <header>
+    <h1>T Solutions</h1>
+    <p id="hero-text">We help businesses overcome challenges and grow stronger.</p>
+    <a href="#contact" class="cta-button">Contact Us</a>
+  </header>
 
-  <!-- Problems Section -->
-  <section class="max-w-5xl mx-auto py-16 px-4 grid md:grid-cols-2 gap-8">
-    <div class="bg-white rounded-2xl p-6 shadow-md">
-      <h2 class="text-2xl font-semibold lang-en">Unclear roles & responsibilities</h2>
-      <h2 class="text-2xl font-semibold lang-fr">Rôles et responsabilités flous</h2>
-      <p class="mt-2 lang-en">Your team doesn’t know who does what, leading to delays and conflicts.</p>
-      <p class="mt-2 lang-fr">Votre équipe ne sait pas qui fait quoi, entraînant des retards et des conflits.</p>
-    </div>
-    <div class="bg-white rounded-2xl p-6 shadow-md">
-      <h2 class="text-2xl font-semibold lang-en">No system for prioritizing tasks</h2>
-      <h2 class="text-2xl font-semibold lang-fr">Aucun système de priorisation des tâches</h2>
-      <p class="mt-2 lang-en">Everything feels urgent. Nothing gets done properly.</p>
-      <p class="mt-2 lang-fr">Tout semble urgent. Rien n'est fait correctement.</p>
-    </div>
-    <div class="bg-white rounded-2xl p-6 shadow-md">
-      <h2 class="text-2xl font-semibold lang-en">Broken communication</h2>
-      <h2 class="text-2xl font-semibold lang-fr">Communication inefficace</h2>
-      <p class="mt-2 lang-en">People talk but don’t understand each other.</p>
-      <p class="mt-2 lang-fr">Les gens parlent mais ne se comprennent pas.</p>
-    </div>
-    <div class="bg-white rounded-2xl p-6 shadow-md">
-      <h2 class="text-2xl font-semibold lang-en">Endless firefighting</h2>
-      <h2 class="text-2xl font-semibold lang-fr">Gestion de crise constante</h2>
-      <p class="mt-2 lang-en">You fix problems daily, but nothing improves long-term.</p>
-      <p class="mt-2 lang-fr">Vous résolvez des problèmes quotidiennement sans amélioration durable.</p>
-    </div>
-  </section>
+  <main>
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul id="services-list">
+        <li>Crisis Management & Planning</li>
+        <li>Communication Optimization</li>
+        <li>Operational Efficiency Audit</li>
+        <li>One-on-One Consulting</li>
+      </ul>
+    </section>
 
-  <!-- Call to Action -->
-  <section class="text-center bg-blue-600 text-white py-16 px-4">
-    <h2 class="text-3xl font-bold lang-en">It’s time for a transformation.</h2>
-    <h2 class="text-3xl font-bold lang-fr">Il est temps de transformer votre entreprise.</h2>
-    <p class="mt-4 lang-en">Let T Solutions guide your business out of chaos.</p>
-    <p class="mt-4 lang-fr">Laissez T Solutions guider votre entreprise hors du chaos.</p>
-    <a href="#contact" class="inline-block mt-6 bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow hover:scale-105 transition-transform">Contact Us</a>
-  </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
 
-  <!-- Contact Form -->
-  <section id="contact" class="max-w-3xl mx-auto py-16 px-4">
-    <h2 class="text-2xl font-bold mb-4 lang-en">Contact Us</h2>
-    <h2 class="text-2xl font-bold mb-4 lang-fr">Contactez-nous</h2>
-    <form action="https://formspree.io/f/xdoqgpwg" method="POST" class="bg-white shadow-md rounded-xl p-6 grid gap-4">
-      <input type="text" name="name" placeholder="Name / Nom" class="border rounded px-4 py-2" required />
-      <input type="email" name="email" placeholder="Email" class="border rounded px-4 py-2" required />
-      <textarea name="message" placeholder="Message" class="border rounded px-4 py-2" rows="5" required></textarea>
-      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">Send / Envoyer</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 py-8 px-2">
-    © 2025 T Solutions. All rights reserved.
+  <footer>
+    <p>&copy; 2025 T Solutions. All rights reserved.</p>
   </footer>
 
-  <!-- Language Switcher Script -->
   <script>
-    const switcher = document.getElementById('langSwitcher');
-    const enElements = document.querySelectorAll('.lang-en');
-    const frElements = document.querySelectorAll('.lang-fr');
-
-    switcher.addEventListener('change', (e) => {
-      const lang = e.target.value;
-      if (lang === 'fr') {
-        enElements.forEach(el => el.style.display = 'none');
-        frElements.forEach(el => el.style.display = 'block');
-      } else {
-        enElements.forEach(el => el.style.display = 'block');
-        frElements.forEach(el => el.style.display = 'none');
-      }
-    });
+    const en = {
+      hero: "We help businesses overcome challenges and grow stronger.",
+      services: [
+        "Crisis Management & Planning",
+        "Communication Optimization",
+        "Operational Efficiency Audit",
+        "One-on-One Consulting"
+      ]
+    };
+    const fr = {
+      hero: "Nous aidons les entreprises à surmonter les défis et à se renforcer.",
+      services: [
+        "Gestion de crise et planification",
+        "Optimisation de la communication",
+        "Audit de l'efficacité opérationnelle",
+        "Consultation individuelle"
+      ]
+    };
+    function switchLang(lang) {
+      const content = lang === 'fr' ? fr : en;
+      document.getElementById('hero-text').innerText = content.hero;
+      const list = document.getElementById('services-list');
+      list.innerHTML = '';
+      content.services.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        list.appendChild(li);
+      });
+    }
   </script>
 </body>
 </html>
