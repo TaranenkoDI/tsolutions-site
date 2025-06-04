@@ -3,106 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="T Solutions - Crisis Management for Businesses" />
-  <meta name="keywords" content="Crisis Management, Business Solutions, T Solutions, Operational Clarity" />
-  <meta name="author" content="T Solutions" />
-  <title>T Solutions - Crisis Management</title>
-  <link rel="icon" href="/logo.png" type="image/png">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <meta name="description" content="T Solutions - Crisis management, communication optimization, and operational efficiency for businesses." />
+  <meta name="keywords" content="crisis management, business optimization, communication, operations, T Solutions" />
+  <meta name="author" content="TaranenkoDI" />
+  <title>T Solutions</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <style>
-    .lang-fr { display: none; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #fff;
+      color: #333;
+    }
+    header {
+      background: #0d2538;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .lang-switcher {
+      text-align: right;
+      padding: 1rem;
+    }
+    .lang-switcher button {
+      margin-left: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .form-section {
+      background: #f7f7f7;
+      padding: 2rem 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      font-size: 1rem;
+    }
+    button[type="submit"] {
+      background: #0d2538;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #0d2538;
+      color: white;
+    }
+    img.logo {
+      width: 150px;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .section, .form-section {
+        padding: 1rem;
+      }
+    }
   </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('[data-en], [data-fr]').forEach(el => {
+        el.innerText = el.dataset[lang];
+      });
+    }
+  </script>
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <!-- Language Toggle -->
-  <div class="flex justify-end p-4">
-    <select id="langSwitcher" class="border rounded px-2 py-1">
-      <option value="en">English</option>
-      <option value="fr">Français</option>
-    </select>
+<body>
+  <div class="lang-switcher">
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('fr')">Français</button>
   </div>
 
-  <!-- Hero Section -->
-  <section class="text-center py-20 bg-white shadow-md">
-    <img src="/logo.png" alt="T Solutions Logo" class="mx-auto w-24 h-24 mb-4">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4 lang-en">Tired of chaos and routine?</h1>
-    <h1 class="text-4xl md:text-5xl font-bold mb-4 lang-fr">Fatigué du chaos et de la routine ?</h1>
-    <p class="text-lg md:text-xl lang-en">Let us bring clarity to your operations.</p>
-    <p class="text-lg md:text-xl lang-fr">Laissez-nous apporter de la clarté à vos opérations.</p>
-    <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_jcikwtux.json" background="transparent" speed="1" style="width: 300px; height: 300px; margin: auto;" loop autoplay></lottie-player>
+  <header>
+    <img src="logo.png" alt="T Solutions Logo" class="logo">
+    <h1 data-en="T Solutions" data-fr="T Solutions">T Solutions</h1>
+    <p data-en="We help businesses bring order to operations, improve communication, and increase efficiency." data-fr="Nous aidons les entreprises à organiser leurs opérations, améliorer la communication et augmenter l'efficacité.">
+      We help businesses bring order to operations, improve communication, and increase efficiency.
+    </p>
+  </header>
+
+  <section class="section">
+    <h2 data-en="Our Services" data-fr="Nos Services">Our Services</h2>
+    <ul>
+      <li data-en="Crisis Management and Planning" data-fr="Gestion de crise et planification">Crisis Management and Planning</li>
+      <li data-en="Communication Streamlining" data-fr="Optimisation de la communication">Communication Streamlining</li>
+      <li data-en="Efficiency Audits" data-fr="Audits d'efficacité">Efficiency Audits</li>
+      <li data-en="Custom Consulting" data-fr="Consultation personnalisée">Custom Consulting</li>
+    </ul>
   </section>
 
-  <!-- Problems Section -->
-  <section class="max-w-5xl mx-auto py-16 px-4 grid md:grid-cols-2 gap-8">
-    <div class="bg-white rounded-2xl p-6 shadow-md">
-      <h2 class="text-2xl font-semibold lang-en">Unclear roles & responsibilities</h2>
-      <h2 class="text-2xl font-semibold lang-fr">Rôles et responsabilités flous</h2>
-      <p class="mt-2 lang-en">Your team doesn’t know who does what, leading to delays and conflicts.</p>
-      <p class="mt-2 lang-fr">Votre équipe ne sait pas qui fait quoi, entraînant des retards et des conflits.</p>
-    </div>
-    <div class="bg-white rounded-2xl p-6 shadow-md">
-      <h2 class="text-2xl font-semibold lang-en">No system for prioritizing tasks</h2>
-      <h2 class="text-2xl font-semibold lang-fr">Aucun système de priorisation des tâches</h2>
-      <p class="mt-2 lang-en">Everything feels urgent. Nothing gets done properly.</p>
-      <p class="mt-2 lang-fr">Tout semble urgent. Rien n'est fait correctement.</p>
-    </div>
-    <div class="bg-white rounded-2xl p-6 shadow-md">
-      <h2 class="text-2xl font-semibold lang-en">Broken communication</h2>
-      <h2 class="text-2xl font-semibold lang-fr">Communication inefficace</h2>
-      <p class="mt-2 lang-en">People talk but don’t understand each other.</p>
-      <p class="mt-2 lang-fr">Les gens parlent mais ne se comprennent pas.</p>
-    </div>
-    <div class="bg-white rounded-2xl p-6 shadow-md">
-      <h2 class="text-2xl font-semibold lang-en">Endless firefighting</h2>
-      <h2 class="text-2xl font-semibold lang-fr">Gestion de crise constante</h2>
-      <p class="mt-2 lang-en">You fix problems daily, but nothing improves long-term.</p>
-      <p class="mt-2 lang-fr">Vous résolvez des problèmes quotidiennement sans amélioration durable.</p>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="text-center bg-blue-600 text-white py-16 px-4">
-    <h2 class="text-3xl font-bold lang-en">It’s time for a transformation.</h2>
-    <h2 class="text-3xl font-bold lang-fr">Il est temps de transformer votre entreprise.</h2>
-    <p class="mt-4 lang-en">Let T Solutions guide your business out of chaos.</p>
-    <p class="mt-4 lang-fr">Laissez T Solutions guider votre entreprise hors du chaos.</p>
-    <a href="#contact" class="inline-block mt-6 bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow hover:scale-105 transition-transform">Contact Us</a>
-  </section>
-
-  <!-- Contact Form -->
-  <section id="contact" class="max-w-3xl mx-auto py-16 px-4">
-    <h2 class="text-2xl font-bold mb-4 lang-en">Contact Us</h2>
-    <h2 class="text-2xl font-bold mb-4 lang-fr">Contactez-nous</h2>
-    <form action="https://formspree.io/f/xdoqgpwg" method="POST" class="bg-white shadow-md rounded-xl p-6 grid gap-4">
-      <input type="text" name="name" placeholder="Name / Nom" class="border rounded px-4 py-2" required />
-      <input type="email" name="email" placeholder="Email" class="border rounded px-4 py-2" required />
-      <textarea name="message" placeholder="Message" class="border rounded px-4 py-2" rows="5" required></textarea>
-      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">Send / Envoyer</button>
+  <section class="form-section">
+    <h2 data-en="Contact Us" data-fr="Contactez-nous">Contact Us</h2>
+    <form action="https://formspree.io/f/mwkgrwlz" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
     </form>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 py-8 px-2">
-    © 2025 T Solutions. All rights reserved.
+  <footer>
+    <p>&copy; 2025 T Solutions. All rights reserved.</p>
   </footer>
-
-  <!-- Language Switcher Script -->
-  <script>
-    const switcher = document.getElementById('langSwitcher');
-    const enElements = document.querySelectorAll('.lang-en');
-    const frElements = document.querySelectorAll('.lang-fr');
-
-    switcher.addEventListener('change', (e) => {
-      const lang = e.target.value;
-      if (lang === 'fr') {
-        enElements.forEach(el => el.style.display = 'none');
-        frElements.forEach(el => el.style.display = 'block');
-      } else {
-        enElements.forEach(el => el.style.display = 'block');
-        frElements.forEach(el => el.style.display = 'none');
-      }
-    });
-  </script>
 </body>
 </html>
